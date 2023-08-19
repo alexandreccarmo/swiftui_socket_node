@@ -24,6 +24,8 @@ io.on('connection', function (socket) {
 
 	socket.on('NodeJs Server Port', function(data){
 		console.log(data);
-		io.socket.emit('iOS Client Port', {msg: 'Hi iOS Client!'});
+		socket.emit('iOS Client Port', {msg: 'Ola iOS Client!'});
 	})
 });
+
+// nodejs server side 2.0.4
